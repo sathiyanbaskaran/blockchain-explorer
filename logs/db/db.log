@@ -1,0 +1,132 @@
+[2019-03-19 15:04:42.001] [DEBUG] pgservice -  the getRowByPkOne sql select count(1) as c from orderer where requests='grpc://127.0.0.1:7050' 
+[2019-03-19 15:04:42.093] [DEBUG] pgservice -  the getRowByPkOne sql select count(1) as c from peer where genesis_block_hash='058abca6e7ac867ba06e474b2b07c0df7cad410266a4777704fa2575c002e805' and requests='grpc://127.0.0.1:7051' 
+[2019-03-19 15:04:42.095] [DEBUG] pgservice - Insert sql is INSERT INTO peer  ( "requests","genesis_block_hash","server_hostname" ) VALUES( $1,$2,$3  ) RETURNING *;
+[2019-03-19 15:04:42.266] [DEBUG] pgservice -  the getRowsBySQlCase select max(blocknum) as blocknum from blocks  where genesis_block_hash='058abca6e7ac867ba06e474b2b07c0df7cad410266a4777704fa2575c002e805'
+[2019-03-19 15:04:42.276] [DEBUG] pgservice -  the getRowByPkOne sql select count(1) as c from chaincodes where name='Kare4u_20' and genesis_block_hash='058abca6e7ac867ba06e474b2b07c0df7cad410266a4777704fa2575c002e805' and version='1.0' and path='github.com/Kare4u_20'
+[2019-03-19 15:04:42.276] [DEBUG] pgservice - Insert sql is INSERT INTO chaincodes  ( "name","version","path","genesis_block_hash" ) VALUES( $1,$2,$3,$4  ) RETURNING *;
+[2019-03-19 15:04:42.278] [DEBUG] pgservice -  the getRowByPkOne sql select count(1) as c from channel where name='mychannel' and genesis_block_hash='058abca6e7ac867ba06e474b2b07c0df7cad410266a4777704fa2575c002e805'
+[2019-03-19 15:04:42.280] [DEBUG] pgservice - Insert sql is INSERT INTO channel  ( "name","createdt","blocks","trans","channel_hash","genesis_block_hash" ) VALUES( $1,$2,$3,$4,$5,$6  ) RETURNING *;
+[2019-03-19 15:04:42.398] [DEBUG] pgservice - --------------------------INSERT----------------------------
+[2019-03-19 15:04:42.398] [DEBUG] pgservice - -----------------------------------------------------------------
+
+
+[2019-03-19 15:04:42.414] [DEBUG] pgservice - --------------------------INSERT----------------------------
+[2019-03-19 15:04:42.415] [DEBUG] pgservice - -----------------------------------------------------------------
+
+
+[2019-03-19 15:04:42.684] [DEBUG] pgservice - --------------------------INSERT----------------------------
+[2019-03-19 15:04:42.685] [DEBUG] pgservice - -----------------------------------------------------------------
+
+
+[2019-03-19 15:04:42.806] [DEBUG] pgservice -  the getRowByPkOne sql select count(1) as c from blocks where blocknum='1' and txcount='1'
+        and genesis_block_hash='058abca6e7ac867ba06e474b2b07c0df7cad410266a4777704fa2575c002e805' and prehash='058abca6e7ac867ba06e474b2b07c0df7cad410266a4777704fa2575c002e805' and datahash='8e66abe3f84cb8b53bcab3f0bd149aa7ff02e14eca6fe6ec31179f034628e0ca' 
+[2019-03-19 15:04:42.807] [DEBUG] pgservice - Insert sql is INSERT INTO blocks  ( "blocknum","prehash","datahash","blockhash","txcount","genesis_block_hash","createdt" ) VALUES( $1,$2,$3,$4,$5,$6,$7  ) RETURNING *;
+[2019-03-19 15:04:43.165] [DEBUG] pgservice - --------------------------INSERT----------------------------
+[2019-03-19 15:04:43.165] [DEBUG] pgservice - -----------------------------------------------------------------
+
+
+[2019-03-19 15:04:43.195] [DEBUG] pgservice - Insert sql is INSERT INTO transactions  ( "blockid","txhash","createdt","chaincodename","chaincode_id","status","creator_msp_id","endorser_msp_id","type","read_set","write_set","genesis_block_hash","validation_code","envelope_signature","payload_extension","creator_nonce","chaincode_proposal_input","endorser_signature","creator_id_bytes","payload_proposal_hash","endorser_id_bytes" ) VALUES( $1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14,$15,$16,$17,$18,$19,$20,$21  ) RETURNING *;
+[2019-03-19 15:04:43.343] [DEBUG] pgservice - --------------------------INSERT----------------------------
+[2019-03-19 15:04:43.344] [DEBUG] pgservice - -----------------------------------------------------------------
+
+
+[2019-03-19 15:04:43.345] [DEBUG] pgservice - update sql is :  update chaincodes set txcount =txcount+1 where name = 'lscc' and genesis_block_hash='058abca6e7ac867ba06e474b2b07c0df7cad410266a4777704fa2575c002e805'
+[2019-03-19 15:04:43.462] [DEBUG] pgservice - --------------------------UPDATE----------------------------
+[2019-03-19 15:04:43.463] [DEBUG] pgservice -  update result : undefined
+[2019-03-19 15:04:43.463] [DEBUG] pgservice - -----------------------------------------------------------------
+
+
+[2019-03-19 15:04:43.494] [DEBUG] pgservice -  the getRowByPkOne sql select count(1) as c from blocks where blocknum='0' and txcount='1'
+        and genesis_block_hash='058abca6e7ac867ba06e474b2b07c0df7cad410266a4777704fa2575c002e805' and prehash='' and datahash='0284c23e2bba621dc85eee99320b2a0176b75fb7263f8a1dbfcc000c6bbd0af7' 
+[2019-03-19 15:04:43.494] [DEBUG] pgservice - Insert sql is INSERT INTO blocks  ( "blocknum","prehash","datahash","blockhash","txcount","genesis_block_hash","createdt" ) VALUES( $1,$2,$3,$4,$5,$6,$7  ) RETURNING *;
+[2019-03-19 15:04:43.732] [DEBUG] pgservice - --------------------------INSERT----------------------------
+[2019-03-19 15:04:43.732] [DEBUG] pgservice - -----------------------------------------------------------------
+
+
+[2019-03-19 15:04:43.747] [DEBUG] pgservice - Insert sql is INSERT INTO transactions  ( "blockid","txhash","createdt","chaincodename","chaincode_id","status","creator_msp_id","endorser_msp_id","type","read_set","write_set","genesis_block_hash","validation_code","envelope_signature","payload_extension","creator_nonce","chaincode_proposal_input","endorser_signature","creator_id_bytes","payload_proposal_hash","endorser_id_bytes" ) VALUES( $1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14,$15,$16,$17,$18,$19,$20,$21  ) RETURNING *;
+[2019-03-19 15:04:43.991] [DEBUG] pgservice - --------------------------INSERT----------------------------
+[2019-03-19 15:04:43.991] [DEBUG] pgservice - -----------------------------------------------------------------
+
+
+[2019-03-19 15:04:43.992] [DEBUG] pgservice - update sql is :  update chaincodes set txcount =txcount+1 where name = '' and genesis_block_hash='058abca6e7ac867ba06e474b2b07c0df7cad410266a4777704fa2575c002e805'
+[2019-03-19 15:04:43.992] [DEBUG] pgservice - --------------------------UPDATE----------------------------
+[2019-03-19 15:04:43.992] [DEBUG] pgservice -  update result : undefined
+[2019-03-19 15:04:43.992] [DEBUG] pgservice - -----------------------------------------------------------------
+
+
+[2019-03-19 15:06:16.658] [DEBUG] pgservice -  the getRowsBySQlQuery  select blocks.blocknum,blocks.txcount ,blocks.datahash ,blocks.blockhash ,blocks.prehash,blocks.createdt,(
+        SELECT  array_agg(txhash) as txhash FROM transactions where blockid = blocks.blocknum and genesis_block_hash = '058abca6e7ac867ba06e474b2b07c0df7cad410266a4777704fa2575c002e805' group by transactions.blockid ),
+        channel.name as channelname  from blocks inner join channel on blocks.genesis_block_hash =channel.genesis_block_hash  where
+         blocks.genesis_block_hash ='058abca6e7ac867ba06e474b2b07c0df7cad410266a4777704fa2575c002e805' and blocknum >= 0
+         order by blocks.blocknum desc
+[2019-03-19 15:06:16.751] [DEBUG] pgservice -  the getRowsBySQlQuery  with minutes as (
+            select generate_series(
+              date_trunc('min', now()) - '1 hour'::interval,
+              date_trunc('min', now()),
+              '1 min'::interval
+            ) as datetime
+          )
+          select
+            minutes.datetime,
+            count(createdt)
+          from minutes
+          left join BLOCKS on date_trunc('min', BLOCKS.createdt) = minutes.datetime and genesis_block_hash ='058abca6e7ac867ba06e474b2b07c0df7cad410266a4777704fa2575c002e805'
+          group by 1
+          order by 1  
+[2019-03-19 15:06:16.753] [DEBUG] pgservice -  the getRowsBySQlQuery  with hours as (
+            select generate_series(
+              date_trunc('hour', now()) - '1day'::interval,
+              date_trunc('hour', now()),
+              '1 hour'::interval
+            ) as datetime
+          )
+          select
+            hours.datetime,
+            count(createdt)
+          from hours
+          left join BLOCKS on date_trunc('hour', BLOCKS.createdt) = hours.datetime and genesis_block_hash ='058abca6e7ac867ba06e474b2b07c0df7cad410266a4777704fa2575c002e805'
+          group by 1
+          order by 1 
+[2019-03-19 15:06:40.500] [INFO] pgservice - Please set logger.setLevel to DEBUG in ./app/helper.js to log the debugging.
+[2019-03-19 15:06:16.755] [DEBUG] pgservice -  the getRowsBySQlNoCondtion select  c.name as chaincodename,channel.name as channelname ,c.version as version,c.genesis_block_hash as genesis_block_hash,c.path as path ,txcount  as c from chaincodes as c inner join channel on c.genesis_block_hash=channel.genesis_block_hash where  c.genesis_block_hash='058abca6e7ac867ba06e474b2b07c0df7cad410266a4777704fa2575c002e805' 
+[2019-03-19 15:06:52.410] [DEBUG] pgservice -  the getRowsBySQlNoCondtion  select c.id as id,c.name as channelname,c.blocks as blocks ,c.genesis_block_hash as genesis_block_hash,c.trans as transactions,c.createdt as createdat,c.channel_hash as channel_hash from channel c
+        group by c.id ,c.name ,c.blocks  ,c.trans ,c.createdt ,c.channel_hash,c.genesis_block_hash order by c.name 
+[2019-03-19 15:06:52.414] [DEBUG] pgservice -  the getRowsBySQlCase select count(1) c from chaincodes where genesis_block_hash='058abca6e7ac867ba06e474b2b07c0df7cad410266a4777704fa2575c002e805' 
+[2019-03-19 15:06:52.418] [DEBUG] pgservice -  the getRowsBySQlNoCondtion select channel.name as channelname,c.requests as requests,c.genesis_block_hash as genesis_block_hash ,c.server_hostname as server_hostname from peer as c inner join  channel on c.genesis_block_hash=channel.genesis_block_hash where c.genesis_block_hash='058abca6e7ac867ba06e474b2b07c0df7cad410266a4777704fa2575c002e805'
+[2019-03-19 15:06:52.422] [DEBUG] pgservice -  the getRowsBySQlCase select count(1) c from transactions where genesis_block_hash='058abca6e7ac867ba06e474b2b07c0df7cad410266a4777704fa2575c002e805'
+[2019-03-19 15:06:52.424] [DEBUG] pgservice -  the getRowsBySQlQuery  select count(creator_msp_id), creator_msp_id
+      from transactions
+      where genesis_block_hash ='058abca6e7ac867ba06e474b2b07c0df7cad410266a4777704fa2575c002e805'
+      group by  creator_msp_id
+[2019-03-19 15:06:52.426] [DEBUG] pgservice -  the getRowsBySQlQuery  select t.creator_msp_id,t.txhash,t.type,t.chaincodename,t.createdt,channel.name as channelname from transactions as t  inner join channel on t.genesis_block_hash=channel.genesis_block_hash where  t.blockid >= 0 and t.id >= 0 and
+        t.genesis_block_hash = '058abca6e7ac867ba06e474b2b07c0df7cad410266a4777704fa2575c002e805'  order by  t.id desc
+[2019-03-19 15:06:52.429] [DEBUG] pgservice -  the getRowsBySQlQuery  with hours as (
+            select generate_series(
+              date_trunc('hour', now()) - '1day'::interval,
+              date_trunc('hour', now()),
+              '1 hour'::interval
+            ) as datetime
+          )
+          select
+            hours.datetime,
+            count(createdt)
+          from hours
+          left join TRANSACTIONS on date_trunc('hour', TRANSACTIONS.createdt) = hours.datetime and genesis_block_hash ='058abca6e7ac867ba06e474b2b07c0df7cad410266a4777704fa2575c002e805'
+          group by 1
+          order by 1 
+[2019-03-19 15:06:52.431] [DEBUG] pgservice -  the getRowsBySQlCase select count(1) c from blocks where genesis_block_hash='058abca6e7ac867ba06e474b2b07c0df7cad410266a4777704fa2575c002e805'
+[2019-03-19 15:06:52.434] [DEBUG] pgservice -  the getRowsBySQlQuery  with minutes as (
+            select generate_series(
+              date_trunc('min', now()) - '1hour'::interval,
+              date_trunc('min', now()),
+              '1 min'::interval
+            ) as datetime
+          )
+          select
+            minutes.datetime,
+            count(createdt)
+          from minutes
+          left join TRANSACTIONS on date_trunc('min', TRANSACTIONS.createdt) = minutes.datetime and genesis_block_hash ='058abca6e7ac867ba06e474b2b07c0df7cad410266a4777704fa2575c002e805'
+          group by 1
+          order by 1 
+[2019-03-19 15:06:52.435] [DEBUG] pgservice -  the getRowsBySQlCase select count(1) c from peer where genesis_block_hash='058abca6e7ac867ba06e474b2b07c0df7cad410266a4777704fa2575c002e805' 

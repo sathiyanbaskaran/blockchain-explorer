@@ -1,0 +1,15 @@
+postgres://hppoc:password@127.0.0.1:5432/fabricexplorer
+
+Property config.syncStartDate set to  2018/07/10
+events.js:183
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: listen EADDRINUSE :::9090
+    at Object._errnoException (util.js:1022:11)
+    at _exceptionWithHostPort (util.js:1044:20)
+    at Server.setupListenHandle [as _listen2] (net.js:1367:14)
+    at listenInCluster (net.js:1408:12)
+    at Server.listen (net.js:1492:7)
+    at startExplorer (/home/sathiyan/Projects/fabric/captive-insurance_blockchain_explorer/main.js:58:10)
+    at <anonymous>

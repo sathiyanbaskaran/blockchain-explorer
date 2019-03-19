@@ -1,0 +1,28 @@
+[2019-03-19 15:04:40.697] [DEBUG] FabricConfiguration - Msp ID : Org1MSP
+[2019-03-19 15:04:40.714] [DEBUG] FabricConfiguration - Msp ID : Org1MSP
+[2019-03-19 15:04:40.776] [INFO] main - Please set logger.setLevel to DEBUG in ./app/helper.js to log the debugging.
+[2019-03-19 15:04:40.776] [INFO] main - Please set logger.setLevel to DEBUG in ./app/helper.js to log the debugging.
+[2019-03-19 15:04:40.808] [DEBUG] Query - <<< Instantiated Chaincodes >>>
+[2019-03-19 15:04:40.808] [DEBUG] Query - name: Kare4u_20, version: 1.0, path: github.com/Kare4u_20
+[2019-03-19 15:04:40.826] [DEBUG] Query - ===========================================
+[2019-03-19 15:04:40.826] [DEBUG] Query - ByteBuffer {
+  buffer: <Buffer 08 02 12 20 92 d1 c7 1d 98 d2 9c 6e 19 62 52 84 24 13 f6 a3 56 c1 f5 02 c5 49 19 e2 7f f7 63 d1 f8 78 1d 13 1a 20 05 8a bc a6 e7 ac 86 7b a0 6e 47 4b ... >,
+  offset: 4,
+  markedOffset: -1,
+  limit: 36,
+  littleEndian: true,
+  noAssert: false }
+[2019-03-19 15:04:40.830] [DEBUG] Query - ===========================================
+[2019-03-19 15:04:40.840] [DEBUG] Query - ===========================================
+[2019-03-19 15:04:40.840] [DEBUG] Query - ByteBuffer {
+  buffer: <Buffer 08 02 12 20 92 d1 c7 1d 98 d2 9c 6e 19 62 52 84 24 13 f6 a3 56 c1 f5 02 c5 49 19 e2 7f f7 63 d1 f8 78 1d 13 1a 20 05 8a bc a6 e7 ac 86 7b a0 6e 47 4b ... >,
+  offset: 4,
+  markedOffset: -1,
+  limit: 36,
+  littleEndian: true,
+  noAssert: false }
+[2019-03-19 15:04:40.841] [DEBUG] Query - ===========================================
+[2019-03-19 15:06:40.819] [DEBUG] FabricConfiguration - Msp ID : Org1MSP
+[2019-03-19 15:06:40.835] [DEBUG] FabricConfiguration - Msp ID : Org1MSP
+[2019-03-19 15:06:40.918] [INFO] main - Please set logger.setLevel to DEBUG in ./app/helper.js to log the debugging.
+[2019-03-19 15:06:52.420] [DEBUG] platform - GetStatus All! [ { status: 'RUNNING', server_hostname: 'peer0.org1.example.com' } ]
